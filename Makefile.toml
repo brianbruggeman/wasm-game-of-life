@@ -1,0 +1,22 @@
+[env]
+RUST_BACKTRACE = "1"
+
+# profile based environment override
+[env.development]
+DEV = true
+
+[env.production]
+PROD = true
+
+[tasks.build-wasm]
+description = "Builds WASM binary"
+install_crate = "wasm-bindgen-cli"
+command = "wasm-pack"
+args = ["build"]
+
+[tasks.serve]
+description = "Uses NPM to serve WASM in reload mode"
+script = '''
+cd www
+npm run start
+'''
