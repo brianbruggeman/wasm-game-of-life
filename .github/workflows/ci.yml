@@ -14,11 +14,8 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: cargo install --force cargo-make 
-      - uses: actions-rs/cargo@v1
-        with:
-          command: make
-          args: style
+      - uses: davidB/rust-cargo-make@v1
+      - run: cargo make style
 
   analyze:
     name: Analyze code
@@ -30,11 +27,8 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: cargo install --force cargo-make 
-      - uses: actions-rs/cargo@v1
-        with:
-          command: make
-          args: analyze
+      - uses: davidB/rust-cargo-make@v1
+      - run: cargo make analyze
 
   check:
     name: Fast compilation check
@@ -46,11 +40,8 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: cargo install --force cargo-make 
-      - uses: actions-rs/cargo@v1
-        with:
-          command: make
-          args: check
+      - uses: davidB/rust-cargo-make@v1
+      - run: cargo make check
 
   test:
     name: Run tests
@@ -62,8 +53,5 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: cargo install --force cargo-make 
-      - uses: actions-rs/cargo@v1
-        with:
-          command: make
-          args: test
+      - uses: davidB/rust-cargo-make@v1
+      - run: cargo make test
