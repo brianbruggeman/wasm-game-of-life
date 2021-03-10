@@ -85,7 +85,6 @@ impl Universe {
     }
 
     pub fn new(width: u32, height: u32) -> Universe {
-
         let mut rng = rand::thread_rng();
         let cells = (0..width * height)
             .map(|_index| {
