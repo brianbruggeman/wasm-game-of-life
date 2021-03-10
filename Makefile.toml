@@ -1,17 +1,30 @@
 [env]
 RUST_BACKTRACE = "1"
 
-# profile based environment override
-[env.development]
-DEV = true
+[tasks.style]
+description = "Style check on code"
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--all", "--", "--check"]
 
-[env.production]
-PROD = true
+[tasks.analyze]
+description = "Run analysis on code"
+command = "cargo"
+args = ["clippy", "--all-targets"]
+
+[tasks.check]
+description = "Fast compiles"
+command = "cargo"
+args = ["check", "--all-targets"]
 
 [tasks.build]
-description = "Builds native binary"
+description = "Builds native release binary"
 command = "cargo"
-args = ["build", "--release", "--lock"]
+args = ["build", "--release", "--locked"]
+
+[tasks.release]
+description = "Runs release steps"
+dependencies = ["style", "analyze", "check", "build"]
 
 [tasks.build-wasm]
 description = "Builds WASM binary"

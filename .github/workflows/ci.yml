@@ -14,11 +14,11 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: rustup component add rustfmt
+      - run: cargo install --force cargo-make 
       - uses: actions-rs/cargo@v1
         with:
-          command: fmt
-          args: --all -- --check
+          command: make
+          args: style
 
   analyze:
     name: Analyze code
@@ -30,11 +30,11 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
-      - run: rustup component add clippy
+      - run: cargo install --force cargo-make 
       - uses: actions-rs/cargo@v1
         with:
-          command: clippy
-          args: --all-targets
+          command: make
+          args: analyze
 
   check:
     name: Fast compilation check
@@ -46,9 +46,11 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
+      - run: cargo install --force cargo-make 
       - uses: actions-rs/cargo@v1
         with:
-          command: check
+          command: make
+          args: check
 
   test:
     name: Run tests
@@ -60,6 +62,8 @@ jobs:
           profile: minimal
           toolchain: stable
           override: true
+      - run: cargo install --force cargo-make 
       - uses: actions-rs/cargo@v1
         with:
-          command: test
+          command: make
+          args: test
