@@ -19,8 +19,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install dependencies
-        run: cargo install --force cargo-make
+      - name: Add rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - name: Add cargo-make
+        uses: davidB/rust-cargo-make@v1
       - name: Build native project
         run: cargo make build 
       - name: Build wasm
