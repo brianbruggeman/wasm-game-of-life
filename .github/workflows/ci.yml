@@ -55,3 +55,16 @@ jobs:
           override: true
       - uses: davidB/rust-cargo-make@v1
       - run: cargo make test
+
+  build-wasm:
+    name: Build WASM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - uses: davidB/rust-cargo-make@v1
+      - run: cargo make build-wasm
