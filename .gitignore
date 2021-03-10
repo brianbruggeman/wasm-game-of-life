@@ -1,5 +1,5 @@
-/target
 **/*.rs.bk
+/target
 Cargo.lock
 bin/
 pkg/
