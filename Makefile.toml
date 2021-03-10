@@ -8,6 +8,11 @@ DEV = true
 [env.production]
 PROD = true
 
+[tasks.build]
+description = "Builds native binary"
+command = "cargo"
+args = ["build", "--release", "--lock"]
+
 [tasks.build-wasm]
 description = "Builds WASM binary"
 install_crate = "wasm-bindgen-cli"

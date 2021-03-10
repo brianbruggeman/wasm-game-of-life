@@ -12,16 +12,20 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            artifact_name: leis-municipais
+            artifact_name: wasm-game-of-life
             asset_name: wasm-game-of-life-linux-amd64
           - os: macos-latest
-            artifact_name: leis-municipais
+            artifact_name: wasm-game-of-life
             asset_name: wasm-game-of-life-macos-amd64
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Build project
-        run: cargo build --release --locked
+      - name: Install dependencies
+        run: cargo install --force cargo-make
+      - name: Build native project
+        run: cargo make build 
+      - name: Build wasm
+        run: cargo make build-wasm
       - name: Upload binary to release
         uses: svenstaro/upload-release-action@v1-release
         with:
