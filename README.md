@@ -16,3 +16,5 @@ Finally:
     cargo make serve
 
 Then open a browser up to http://localhost:8080
+
+Live demo: https://brianbruggeman.github.io/wasm-game-of-life
