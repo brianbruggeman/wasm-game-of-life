@@ -2,19 +2,12 @@
 
 # Quickstart
 
-This package requires that cargo-make be installed:
+This package requires that [rust](https://www.rust-lang.org/tools/install), [cargo-make](https://github.com/sagiegurari/cargo-make#installation) and [npm](https://www.npmjs.com/get-npm) be installed.
 
-    cargo install cargo-make
+Then run:
 
-Additionally, this package requires that npm be installed:
-
-    see: https://www.npmjs.com/get-npm
-
-Finally:
-
-    cargo make build-wasm
     cargo make serve
 
-Then open a browser up to http://localhost:8080
+And open a browser up to http://localhost:8080
 
 Live demo [here](https://brianbruggeman.github.io/wasm-game-of-life).
