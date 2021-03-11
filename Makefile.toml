@@ -72,8 +72,13 @@ dependencies = ["npm-install"]
 [tasks.deploy]
 description = "Rebuilds github pages"
 script = '''
-mkdir -p docs
-cp -Rf www/dist/* docs/
+git checkout gh-pages
+git rm --force *.wasm
+cp www/dist/* .
+git add *.js *.wasm index.html
+git commit -am 'cargo-make deploy updates'
+git push
+git checkout main
 '''
 dependencies = ["clean-wasm", "build-wasm", "npm-build"]
 
