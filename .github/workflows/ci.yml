@@ -56,19 +56,17 @@ jobs:
       - uses: davidB/rust-cargo-make@v1
       - run: cargo make test
 
-  # build-wasm:
-  #   name: Build WASM
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions-rs/toolchain@v1
-  #       with:
-  #         profile: minimal
-  #         toolchain: stable
-  #         override: true
-  #     - uses: davidB/rust-cargo-make@v1
-  #     - uses: jetli/wasm-bindgen-action@v0.1.0
-  #       with:
-  #         # Optional version of wasm-bindgen to install (eg. '0.2.68', 'latest')
-  #         version: 'latest'
-  #     - run: cargo make build-wasm
+  build-wasm:
+    name: Build WASM
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - uses: davidB/rust-cargo-make@v1
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - run: cargo make build-wasm
