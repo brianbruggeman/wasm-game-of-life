@@ -22,9 +22,14 @@ description = "Builds native release binary"
 command = "cargo"
 args = ["build", "--release", "--locked"]
 
+[tasks.test]
+description = "Tests package"
+command = "cargo"
+args = ["test", "--all"]
+
 [tasks.release]
 description = "Runs release steps"
-dependencies = ["style", "analyze", "check", "build"]
+dependencies = ["style", "analyze", "check", "build", "test"]
 
 [tasks.build-wasm]
 description = "Builds WASM binary"
