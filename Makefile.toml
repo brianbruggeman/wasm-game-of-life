@@ -32,9 +32,35 @@ install_crate = "wasm-bindgen-cli"
 command = "wasm-pack"
 args = ["build"]
 
+[tasks.npm-install]
+description = "Rebuilds www"
+script = '''
+cd www 
+npm install
+'''
+
 [tasks.serve]
 description = "Uses NPM to serve WASM in reload mode"
 script = '''
-cd www
+cd www 
 npm run start
 '''
+dependencies = ["npm-install"]
+
+[tasks.npm-build]
+description = "Rebuilds github pages"
+script = '''
+cd www
+npm run build
+'''
+dependencies = ["npm-install"]
+
+[tasks.deploy]
+description = "Rebuilds github pages"
+script = '''
+mkdir -p docs
+rm -Rf ./docs/*
+cp -Rf www/dist/* docs/
+'''
+dependencies = ["build-wasm", "npm-build"]
+
