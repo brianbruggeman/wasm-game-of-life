@@ -2,12 +2,12 @@ import { Universe, Cell } from "wasm-game-of-life";
 import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
 
 
-const CELL_SIZE = 5; // px
+const CELL_SIZE = 15; // px
 const GRID_COLOR = "#115511";
 const DEAD_COLOR = "#779977";
 const ALIVE_COLOR = "#00FF00";
 
-const universe = Universe.new(200, 150);
+const universe = Universe.new(30, 30);
 const width = universe.width();
 const height = universe.height();
 
