@@ -1,5 +1,7 @@
 # wasm-game-of-life
 
+![main branch](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
+
 # Quickstart
 
 This package requires that [rust](https://www.rust-lang.org/tools/install), [cargo-make](https://github.com/sagiegurari/cargo-make#installation) and [npm](https://www.npmjs.com/get-npm) be installed.
