@@ -1,6 +1,6 @@
 # wasm-game-of-life
 
-![main branch](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
+![continuous integration](https://github.com/github/docs/actions/workflows/ci.yml/badge.svg)
 
 # Quickstart
 
