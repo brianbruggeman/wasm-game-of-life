@@ -1,6 +1,6 @@
 # wasm-game-of-life
 
-![continuous integration](https://github.com/github/docs/actions/workflows/ci.yml/badge.svg)
+![continuous integration](https://github.com/brianbruggeman/wasm-game-of-life/actions/workflows/ci.yml/badge.svg)
 
 # Quickstart
 
