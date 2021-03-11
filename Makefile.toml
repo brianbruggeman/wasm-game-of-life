@@ -31,11 +31,20 @@ args = ["test", "--all"]
 description = "Runs release steps"
 dependencies = ["style", "analyze", "check", "build", "test"]
 
+[tasks.clean-wasm]
+description = "Cleans wasm artifacts"
+script = '''
+rm -Rf target/wasm-web/*
+rm -Rf docs/*
+rm -Rf www/dist/*
+'''
+
 [tasks.build-wasm]
 description = "Builds WASM binary"
 install_crate = "wasm-bindgen-cli"
 command = "wasm-pack"
-args = ["build"]
+args = ["build", "--out-dir", "target/wasm-web/"]
+dependencies = ["clean-wasm"]
 
 [tasks.npm-install]
 description = "Rebuilds www"
@@ -47,8 +56,8 @@ npm install
 [tasks.serve]
 description = "Uses NPM to serve WASM in reload mode"
 script = '''
-cd www 
-npm run start
+cd docs
+python -m http.server
 '''
 dependencies = ["npm-install"]
 
@@ -64,8 +73,7 @@ dependencies = ["npm-install"]
 description = "Rebuilds github pages"
 script = '''
 mkdir -p docs
-rm -Rf ./docs/*
 cp -Rf www/dist/* docs/
 '''
-dependencies = ["build-wasm", "npm-build"]
+dependencies = ["clean-wasm", "build-wasm", "npm-build"]
 

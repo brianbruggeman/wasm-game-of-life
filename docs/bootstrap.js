@@ -52,59 +52,59 @@
 /******/ 	function promiseResolve() { return Promise.resolve(); }
 /******/
 /******/ 	var wasmImportObjects = {
-/******/ 		"../pkg/wasm_game_of_life_bg.wasm": function() {
+/******/ 		"../target/wasm-web/wasm_game_of_life_bg.wasm": function() {
 /******/ 			return {
 /******/ 				"./wasm_game_of_life_bg.js": {
 /******/ 					"__wbg_getRandomValues_57e4008f45f0e105": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_getRandomValues_57e4008f45f0e105"](p0i32,p1i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_getRandomValues_57e4008f45f0e105"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbg_randomFillSync_d90848a552cbd666": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_randomFillSync_d90848a552cbd666"](p0i32,p1i32,p2i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_randomFillSync_d90848a552cbd666"](p0i32,p1i32,p2i32);
 /******/ 					},
 /******/ 					"__wbg_static_accessor_MODULE_39947eb3fe77895f": function() {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_static_accessor_MODULE_39947eb3fe77895f"]();
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_static_accessor_MODULE_39947eb3fe77895f"]();
 /******/ 					},
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_self_f865985e662246aa": function() {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_self_f865985e662246aa"]();
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_self_f865985e662246aa"]();
 /******/ 					},
 /******/ 					"__wbg_require_c59851dfa0dc7e78": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_require_c59851dfa0dc7e78"](p0i32,p1i32,p2i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_require_c59851dfa0dc7e78"](p0i32,p1i32,p2i32);
 /******/ 					},
 /******/ 					"__wbg_crypto_bfb05100db79193b": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_crypto_bfb05100db79193b"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_crypto_bfb05100db79193b"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_msCrypto_f6dddc6ae048b7e2": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_msCrypto_f6dddc6ae048b7e2"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_msCrypto_f6dddc6ae048b7e2"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_is_undefined": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_buffer_e35e010c3ba9f945": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_buffer_e35e010c3ba9f945"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_buffer_e35e010c3ba9f945"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_new_139e70222494b1ff": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_new_139e70222494b1ff"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_new_139e70222494b1ff"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_set_d771848e3c7935bb": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_set_d771848e3c7935bb"](p0i32,p1i32,p2i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_set_d771848e3c7935bb"](p0i32,p1i32,p2i32);
 /******/ 					},
 /******/ 					"__wbg_length_2cfa674c2a529bc1": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_length_2cfa674c2a529bc1"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_length_2cfa674c2a529bc1"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_newwithlength_e0c461e90217842c": function(p0i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_newwithlength_e0c461e90217842c"](p0i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_newwithlength_e0c461e90217842c"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_subarray_8a52f1c1a11c02a8": function(p0i32,p1i32,p2i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbg_subarray_8a52f1c1a11c02a8"](p0i32,p1i32,p2i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbg_subarray_8a52f1c1a11c02a8"](p0i32,p1i32,p2i32);
 /******/ 					},
 /******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbindgen_memory": function() {
-/******/ 						return installedModules["../pkg/wasm_game_of_life_bg.js"].exports["__wbindgen_memory"]();
+/******/ 						return installedModules["../target/wasm-web/wasm_game_of_life_bg.js"].exports["__wbindgen_memory"]();
 /******/ 					}
 /******/ 				}
 /******/ 			};
@@ -197,7 +197,7 @@
 /******/
 /******/ 		// Fetch + compile chunk loading for webassembly
 /******/
-/******/ 		var wasmModules = {"0":["../pkg/wasm_game_of_life_bg.wasm"]}[chunkId] || [];
+/******/ 		var wasmModules = {"0":["../target/wasm-web/wasm_game_of_life_bg.wasm"]}[chunkId] || [];
 /******/
 /******/ 		wasmModules.forEach(function(wasmModuleId) {
 /******/ 			var installedWasmModuleData = installedWasmModules[wasmModuleId];
@@ -207,7 +207,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/wasm_game_of_life_bg.wasm":"b4ca35f1df8e7ea9faac"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"../target/wasm-web/wasm_game_of_life_bg.wasm":"a752e168d5f8f32bcd77"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
